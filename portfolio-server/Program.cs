@@ -75,7 +75,8 @@ builder
               builder => builder
                   .WithOrigins("http://localhost:4200",
                     "https://portfolio.jasmim.dev",
-                    "https://www.jasmim.dev")
+                    "https://www.jasmim.dev",
+                    "https://jasmim.dev")
                   .AllowAnyHeader()
                   .AllowAnyMethod());
         });
