@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for portfolio-server on 2024-10-12T13:53:57-03:00
+# fly.toml app configuration file generated for portfolio-control-server on 2024-10-20T22:34:53-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'portfolio-server'
-primary_region = 'gig'
+app = 'portfolio-control-server'
+primary_region = 'gru'
 
 [build]
 
