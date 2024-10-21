@@ -10,10 +10,8 @@ namespace finance_control_server.Models
 {
     public class ContatoDTO
     {
-        public required string ContatoId { get; set; }
-        public required string Nome { get; set; }
-        public required string Email { get; set; }
-        public required string Assunto { get; set; }
-        public required DateTime Data { get; set; }
+        public string? Nome { get; set; }
+        public string? Email { get; set; }
+        public string? Assunto { get; set; }
     }
 }
