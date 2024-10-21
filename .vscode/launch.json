@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "C#: portfolio-server [https]",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/portfolio-server/portfolio-server.csproj",
+            "launchConfigurationId": "TargetFramework=;https"
+        }
+    ]
+}

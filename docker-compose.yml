@@ -1,0 +1,6 @@
+﻿services:
+  portfolio-server:
+    image: portfolio-server
+    build:
+      context: .
+      dockerfile: portfolio-server/Dockerfile
