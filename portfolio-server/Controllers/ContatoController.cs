@@ -10,7 +10,7 @@ namespace finance_control_server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [AllowAnonymous]
     public class ContatoController : ControllerBase
     {
         private readonly IMapper _mapper;
