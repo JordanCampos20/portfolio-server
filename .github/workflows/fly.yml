@@ -14,8 +14,10 @@ jobs:
 
       - name: Fly.io Secrets
         run: |
-          flyctl secrets set CONEXAO_BANCO="${{ secrets.CONEXAO_BANCO }}"
+          flyctl secrets set EMAIL="${{ secrets.EMAIL }}"
           flyctl secrets set JWT_KEY="${{ secrets.JWT_KEY }}"
+          flyctl secrets set EMAIL_SENHA="${{ secrets.EMAIL_SENHA }}"
+          flyctl secrets set CONEXAO_BANCO="${{ secrets.CONEXAO_BANCO }}"
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 

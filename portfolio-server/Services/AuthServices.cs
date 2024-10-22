@@ -152,9 +152,9 @@ public class AuthServices
 
                 MailDTO mailDTO = new MailDTO()
                 {
-                    Subject = "FinancClient - Confirm Email",
-                    Body = string.Format("link para confirmar o email http://localhost:4200/confirm-email/{0}", token_confirm_email),
-                    From = "financ@jordanc20.com.br",
+                    Subject = "Portfolio - Confirme Email",
+                    Body = string.Format("link para confirmar o email https://jasmim.dev/confirm-email/{0}", token_confirm_email),
+                    From = "portfolio@jasmim.dev",
                     To = new List<string>() { usuario.Email! },
                 };
 
@@ -226,9 +226,9 @@ public class AuthServices
 
                 MailDTO mailDTO = new MailDTO()
                 {
-                    Subject = "FinancClient - Recovery Password",
-                    Body = string.Format("link para redefinir a senha http://localhost:4200/forgot-password/{0}", token_password_reset),
-                    From = "financ@jordanc20.com.br",
+                    Subject = "Portfolio - Esqueceu a senha",
+                    Body = string.Format("link para redefinir a senha https://portfolio.jasmim.dev/forgot-password/{0} \n caso você não tenha pedido isso, ignore!", token_password_reset),
+                    From = "portfolio@jasmim.dev",
                     To = new List<string>() { usuario.Email! },
                 };
 

@@ -20,7 +20,8 @@ public class MailServices
     {
         SmtpClient smtpClient = new SmtpClient
         {
-            Credentials = new NetworkCredential("jordandebug@gmail.com", "lvuqrxvqtatnmmfb"),
+            Credentials = new NetworkCredential(Environment.GetEnvironmentVariable("EMAIL"),
+                Environment.GetEnvironmentVariable("EMAIL_SENHA")),
             Host = "smtp.gmail.com",
             Port = 587,
             EnableSsl = true
