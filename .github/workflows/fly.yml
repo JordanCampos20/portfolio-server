@@ -12,7 +12,14 @@ jobs:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
 
-      - name: Fly.io Deploy With Secrets
-        run: flyctl deploy --remote-only --build-secret CONEXAO_BANCO=${{ secrets.CONEXAO_BANCO }},JWT_KEY=${{ secrets.JWT_KEY }}
+      - name: Fly.io Secrets
+        run: |
+          flyctl secrets set CONEXAO_BANCO="${{ secrets.CONEXAO_BANCO }}"
+          flyctl secrets set JWT_KEY="${{ secrets.JWT_KEY }}"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
+      - name: Fly.io Deploy
+        run: flyctl deploy --remote-only
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
