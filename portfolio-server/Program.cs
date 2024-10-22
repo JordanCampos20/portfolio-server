@@ -36,7 +36,7 @@ builder.Services
             ValidIssuer = builder.Configuration["Token:Issuer"],
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(builder.Configuration[Environment.GetEnvironmentVariable("JWT_KEY")!]!)
+                Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("JWT_KEY")!)
             )
         });
 

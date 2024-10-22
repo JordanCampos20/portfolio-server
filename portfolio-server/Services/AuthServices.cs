@@ -298,7 +298,7 @@ public class AuthServices
                     ValidIssuer = _configuration["Token:Issuer"],
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(_configuration[Environment.GetEnvironmentVariable("JWT_KEY")!]!)
+                        Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("JWT_KEY")!)
                     )
                 };
 
@@ -345,7 +345,7 @@ public class AuthServices
             new Claim(ClaimTypes.Role, usuarioCargo != null ? usuarioCargo.RoleId : ""),
         };
 
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration[Environment.GetEnvironmentVariable("JWT_KEY")!]!));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("JWT_KEY")!));
 
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
