@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace finance_control_server.Models
+namespace portfolio_server.Models
 {
     public class Contato
     {

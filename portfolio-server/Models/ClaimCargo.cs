@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace finance_control_server.Models
+namespace portfolio_server.Models
 {
     public class ClaimCargo : IdentityRoleClaim<string>
     {

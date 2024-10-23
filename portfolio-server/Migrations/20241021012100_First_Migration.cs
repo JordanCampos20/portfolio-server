@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace finance_control_server.Migrations
+namespace portfolio_server.Migrations
 {
     /// <inheritdoc />
     public partial class First_Migration : Migration

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace finance_control_server.Models
+namespace portfolio_server.Models
 {
     public class ContatoDTO
     {

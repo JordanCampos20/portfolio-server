@@ -1,7 +1,7 @@
 using AutoMapper;
-using finance_control_server.Models;
+using portfolio_server.Models;
 
-namespace finance_control_server.DTOs.Mappings
+namespace portfolio_server.DTOs.Mappings
 {
     public class MappingProfile : Profile
     {

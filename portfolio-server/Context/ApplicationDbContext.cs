@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using finance_control_server.Models;
+using portfolio_server.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace finance_control_server.Context
+namespace portfolio_server.Context
 {
     public class ApplicationDbContext : IdentityDbContext<Usuario, Cargo, string, ClaimUsuario, UsuarioCargo, LoginUsuario, ClaimCargo, TokenUsuario>
     {

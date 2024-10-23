@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using finance_control_server.Context;
-using finance_control_server.Models;
+using portfolio_server.Context;
+using portfolio_server.Models;
 using System.Security.Claims;
-using finance_control_server.Services;
+using portfolio_server.Services;
 
 public class ContatoServices
 {

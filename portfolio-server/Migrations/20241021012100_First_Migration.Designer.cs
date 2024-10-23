@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using finance_control_server.Context;
+using portfolio_server.Context;
 
 #nullable disable
 
-namespace finance_control_server.Migrations
+namespace portfolio_server.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20241021012100_First_Migration")]
@@ -25,7 +25,7 @@ namespace finance_control_server.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("finance_control_server.Models.Cargo", b =>
+            modelBuilder.Entity("portfolio_server.Models.Cargo", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("text");
@@ -51,7 +51,7 @@ namespace finance_control_server.Migrations
                     b.ToTable("Cargo", (string)null);
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.ClaimCargo", b =>
+            modelBuilder.Entity("portfolio_server.Models.ClaimCargo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -76,7 +76,7 @@ namespace finance_control_server.Migrations
                     b.ToTable("ClaimCargo", (string)null);
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.ClaimUsuario", b =>
+            modelBuilder.Entity("portfolio_server.Models.ClaimUsuario", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -101,7 +101,7 @@ namespace finance_control_server.Migrations
                     b.ToTable("ClaimUsuario", (string)null);
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.Contato", b =>
+            modelBuilder.Entity("portfolio_server.Models.Contato", b =>
                 {
                     b.Property<string>("ContatoId")
                         .HasColumnType("text");
@@ -129,7 +129,7 @@ namespace finance_control_server.Migrations
                     b.ToTable("Contatos", (string)null);
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.LoginUsuario", b =>
+            modelBuilder.Entity("portfolio_server.Models.LoginUsuario", b =>
                 {
                     b.Property<string>("LoginProvider")
                         .HasColumnType("text");
@@ -151,7 +151,7 @@ namespace finance_control_server.Migrations
                     b.ToTable("LoginUsuario", (string)null);
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.TokenUsuario", b =>
+            modelBuilder.Entity("portfolio_server.Models.TokenUsuario", b =>
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("text");
@@ -170,7 +170,7 @@ namespace finance_control_server.Migrations
                     b.ToTable("TokenUsuario", (string)null);
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.Usuario", b =>
+            modelBuilder.Entity("portfolio_server.Models.Usuario", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("text");
@@ -242,7 +242,7 @@ namespace finance_control_server.Migrations
                     b.ToTable("Usuario", (string)null);
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.UsuarioCargo", b =>
+            modelBuilder.Entity("portfolio_server.Models.UsuarioCargo", b =>
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("text");
@@ -257,51 +257,51 @@ namespace finance_control_server.Migrations
                     b.ToTable("UsuarioCargo", (string)null);
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.ClaimCargo", b =>
+            modelBuilder.Entity("portfolio_server.Models.ClaimCargo", b =>
                 {
-                    b.HasOne("finance_control_server.Models.Cargo", null)
+                    b.HasOne("portfolio_server.Models.Cargo", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.ClaimUsuario", b =>
+            modelBuilder.Entity("portfolio_server.Models.ClaimUsuario", b =>
                 {
-                    b.HasOne("finance_control_server.Models.Usuario", null)
+                    b.HasOne("portfolio_server.Models.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.LoginUsuario", b =>
+            modelBuilder.Entity("portfolio_server.Models.LoginUsuario", b =>
                 {
-                    b.HasOne("finance_control_server.Models.Usuario", null)
+                    b.HasOne("portfolio_server.Models.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.TokenUsuario", b =>
+            modelBuilder.Entity("portfolio_server.Models.TokenUsuario", b =>
                 {
-                    b.HasOne("finance_control_server.Models.Usuario", null)
+                    b.HasOne("portfolio_server.Models.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("finance_control_server.Models.UsuarioCargo", b =>
+            modelBuilder.Entity("portfolio_server.Models.UsuarioCargo", b =>
                 {
-                    b.HasOne("finance_control_server.Models.Cargo", null)
+                    b.HasOne("portfolio_server.Models.Cargo", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("finance_control_server.Models.Usuario", null)
+                    b.HasOne("portfolio_server.Models.Usuario", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

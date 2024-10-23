@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace finance_control_server.ViewModels
+namespace portfolio_server.ViewModels
 {
     public class ResponseViewModel(string message, int status)
     {

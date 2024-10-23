@@ -1,10 +1,10 @@
 using System.Net;
-using finance_control_server.DTOs;
-using finance_control_server.ViewModels;
+using portfolio_server.DTOs;
+using portfolio_server.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace finance_control_server.Controllers
+namespace portfolio_server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

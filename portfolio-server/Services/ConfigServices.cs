@@ -2,7 +2,7 @@ using System.Security.Claims;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace finance_control_server.Services
+namespace portfolio_server.Services
 {
     public static class ConfigServices
     {

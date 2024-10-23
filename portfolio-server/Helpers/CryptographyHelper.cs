@@ -1,7 +1,7 @@
 using System.Text;
 using System.Security.Cryptography;
 
-namespace finance_control_server.Helpers
+namespace portfolio_server.Helpers
 {
     public static class CryptographyHelper
     {

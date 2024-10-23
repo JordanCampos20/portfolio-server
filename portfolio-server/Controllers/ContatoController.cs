@@ -1,12 +1,12 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using finance_control_server.Models;
+using portfolio_server.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using finance_control_server.ViewModels;
-using finance_control_server.Services;
+using portfolio_server.ViewModels;
+using portfolio_server.Services;
 
-namespace finance_control_server.Controllers
+namespace portfolio_server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

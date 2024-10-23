@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace finance_control_server.Models
+namespace portfolio_server.Models
 {
     public class Usuario : IdentityUser
     {

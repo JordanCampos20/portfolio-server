@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace finance_control_server.DTOs
+namespace portfolio_server.DTOs
 {
   public class MailDTO
   {

@@ -1,15 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
-using finance_control_server.Context;
-using finance_control_server.Models;
+using portfolio_server.Context;
+using portfolio_server.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
 using AutoMapper;
-using finance_control_server.DTOs.Mappings;
-using finance_control_server.Services;
+using portfolio_server.DTOs.Mappings;
+using portfolio_server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using finance_control_server.Context;
-using finance_control_server.Models;
-using finance_control_server.DTOs;
+using portfolio_server.Context;
+using portfolio_server.Models;
+using portfolio_server.DTOs;
 using Microsoft.AspNetCore.Identity;
 using System.Net.Mail;
 using System.Net;

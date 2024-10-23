@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using finance_control_server.Context;
-using finance_control_server.Models;
-using finance_control_server.DTOs;
+using portfolio_server.Context;
+using portfolio_server.Models;
+using portfolio_server.DTOs;
 using Microsoft.AspNetCore.Identity;
-using finance_control_server.ViewModels;
+using portfolio_server.ViewModels;
 using System.Text.Json;
-using finance_control_server.Helpers;
+using portfolio_server.Helpers;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
