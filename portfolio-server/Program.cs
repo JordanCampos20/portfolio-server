@@ -13,7 +13,8 @@ using portfolio_server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = Environment.GetEnvironmentVariable("CONEXAO_BANCO");
+var connectionString = Environment.GetEnvironmentVariable("CONEXAO_BANCO") 
+    ?? Environment.GetEnvironmentVariable("CONEXAO_BANCO_PERSONAL");
 
 builder
     .Services.AddDbContext<ApplicationDbContext>(options =>
